@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Show Detail</title>
+   <style>
+    .container
+    {
+      background-color: yellow;
+    }
+    table, th, td 
+    {
+      border: 1px solid black;
+    }
+   </style>
+</head>
+<body class="container">
+  <h1>Dummy Users</h1>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Age</th>
+      <th>City</th>
+      <th>Profession</th>
+    </tr>
+    <% for(let i=0;i<userdata.length;i++) 
+    {%>
+      <tr>
+        <td><%= userdata[i].name%></td>
+        <td><%= userdata[i].email%></td>
+        <td><%= userdata[i].age%></td>
+        <td><%= userdata[i].city%></td>
+        <td><%= userdata[i].profession%></td>
+      </tr>
+    <%} 
+    %>
+  </table><br>
+  <br><br><br>
+  <a href="http://localhost:8080/UserAdd">Add Users</a>
+</body>
+</html>
